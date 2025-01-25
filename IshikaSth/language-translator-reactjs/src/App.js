@@ -1,6 +1,6 @@
 import React from 'react'; 
 import "./App.css";
-import LanguageTranslator from "./components/LanguageTranslator";
+import LanguageTranslator from "./Component/LanguageTranslator";
 function App() {
   return (
     <>

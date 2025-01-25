@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import countries from "../data"; 
+import countries from "../data"; // Make sure countries is an object with country codes and names
+
 const Translate = () => {
   const [fromText, setFromText] = useState("");
   const [toText, setToText] = useState("");
@@ -11,6 +12,7 @@ const Translate = () => {
     setFromText(e.target.value);
   };
 
+  // Translate the input text when the button is clicked
   const handleTranslate = () => {
     if (fromText === "") return;
 
@@ -24,6 +26,7 @@ const Translate = () => {
       });
   };
 
+  // Exchange languages between the two selects
   const handleExchange = () => {
     setFromLang(toLang);
     setToLang(fromLang);
@@ -31,7 +34,7 @@ const Translate = () => {
     setToText(fromText);
   };
 
-
+  // Copy text to clipboard
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
   };
